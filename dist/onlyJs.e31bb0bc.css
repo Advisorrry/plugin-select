@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.app {
+  padding-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.wrap {
+  width: 500px;
+}
+
+.select__input {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+/*# sourceMappingURL=/onlyJs.e31bb0bc.css.map */

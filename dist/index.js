@@ -134,44 +134,23 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 function _classPrivateMethodGet(receiver, privateSet, fn) { if (!privateSet.has(receiver)) { throw new TypeError("attempted to get private field on non-instance"); } return fn; }
 
 var getTemplate = function getTemplate() {
-  return "\n     <div class=\"select__input\" data-type=\"input\">\n                   <span>text</span>\n                   <i class=\"fas fa-angle-down\"></i>\n               </div>\n                <div id=\"scroll\" data-simplebar class=\"select__dropdown\">\n                    <ul class=\"select__list\">\n                        <li class=\"select__item\">123</li>\n                        <li class=\"select__item\">123</li>\n                        <li class=\"select__item\">123</li>\n                        <li class=\"select__item\">123</li>\n                        <li class=\"select__item\">123</li>\n                    </ul>\n                </div>\n    ";
+  return "\n     <div class=\"select__input\">\n                   <span>text</span>\n                   <i class=\"fas fa-angle-down\"></i>\n               </div>\n                <div id=\"scroll\" data-simplebar class=\"select__dropdown\">\n                    <ul class=\"select__list\">\n                        <li class=\"select__item\">123</li>\n                        <li class=\"select__item\">123</li>\n                        <li class=\"select__item\">123</li>\n                        <li class=\"select__item\">123</li>\n                        <li class=\"select__item\">123</li>\n                    </ul>\n                </div>\n    ";
 };
 
 var _render = new WeakSet();
 
-var _setup = new WeakSet();
-
 var Select = /*#__PURE__*/function () {
   function Select(selector, options) {
     _classCallCheck(this, Select);
-
-    _setup.add(this);
 
     _render.add(this);
 
     this.$el = document.querySelector(selector);
 
     _classPrivateMethodGet(this, _render, _render2).call(this);
-
-    _classPrivateMethodGet(this, _setup, _setup2).call(this);
   }
 
   _createClass(Select, [{
-    key: "clickHandler",
-    value: function clickHandler(event) {
-      var type = event.target.dataset.type;
-      console.log(event);
-
-      if (type === 'input') {
-        this.toggle();
-      }
-    }
-  }, {
-    key: "toggle",
-    value: function toggle() {
-      this.isOpen ? this.close() : this.open();
-    }
-  }, {
     key: "open",
     value: function open() {
       this.$el.classList.add("open");
@@ -181,16 +160,6 @@ var Select = /*#__PURE__*/function () {
     value: function close() {
       this.$el.classList.remove("open");
     }
-  }, {
-    key: "destroy",
-    value: function destroy() {
-      this.$el.removeEventListener('click', this.clickHandler);
-    }
-  }, {
-    key: "isOpen",
-    get: function get() {
-      return this.$el.classList.contains('open');
-    }
   }]);
 
   return Select;
@@ -199,13 +168,7 @@ var Select = /*#__PURE__*/function () {
 exports.Select = Select;
 
 var _render2 = function _render2() {
-  this.$el.classList.add('select');
-  this.$el.innerHTML = getTemplate();
-};
-
-var _setup2 = function _setup2() {
-  this.clickHandler = this.clickHandler.bind(this);
-  this.$el.addEventListener('click', this.clickHandler);
+  this.$el.innerHeight = getTemplate();
 };
 },{}],"C:/Users/SYPIK/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
@@ -287,7 +250,6 @@ var _select = require("./select/select");
 require("./select/styles.scss");
 
 var select = new _select.Select('#select', {});
-window.s = select;
 },{"./select/select":"select/select.js","./select/styles.scss":"select/styles.scss"}],"C:/Users/SYPIK/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -316,7 +278,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50828" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60718" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -493,4 +455,4 @@ function hmrAcceptRun(bundle, id) {
   }
 }
 },{}]},{},["C:/Users/SYPIK/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/Select.e31bb0bc.js.map
+//# sourceMappingURL=/index.js.map

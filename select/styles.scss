@@ -1,15 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
-
 
 .app {
   padding-top: 5rem;
   display: flex;
   justify-content: center;
-
 }
 
 .wrap {
@@ -28,7 +26,7 @@ $height: 46px;
     }
 
     .select__input {
-     border-bottom: none;
+      border-bottom: none;
     }
   }
 
@@ -53,7 +51,7 @@ $height: 46px;
     right: 0;
     max-height: 200px;
     overflow-y: auto;
-    box-shadow: 2px 3px 5px rgba(0, 0, 0, .3);
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
   }
 
   &__list {
@@ -65,13 +63,11 @@ $height: 46px;
   &__item {
     padding: 1rem;
     border-bottom: 1px solid #ccc;
-    
+
     &:hover {
       background-color: #eee;
       cursor: pointer;
-      transition: .11s background-color ease-in;
+      transition: 0.11s background-color ease-in;
     }
-
   }
 }
-

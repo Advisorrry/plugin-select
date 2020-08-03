@@ -1,0 +1,26 @@
+{
+  "name": "plugin-select",
+  "version": "1.0.0",
+  "description": "Очередной проект созданный для обучения",
+  "main": "index.js",
+  "dependencies": {
+    "simplebar": "^5.2.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.5",
+    "sass": "^1.26.10"
+  },
+  "scripts": {
+    "test": "echo \"Error: no testnpm install --save-dev sass specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Advisorrry/plugin-select.git"
+  },
+  "author": "Advisorrry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Advisorrry/plugin-select/issues"
+  },
+  "homepage": "https://github.com/Advisorrry/plugin-select#readme"
+}
